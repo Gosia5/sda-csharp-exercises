@@ -12,6 +12,7 @@ namespace sda_csharp_exercises
             //person.LastName = "Kowalski";
             //person.YearOfBirth = 1981;
             //Console.WriteLine(person.IsAdult());
+           
             //Person person = new Person()
             //{
             //    FirstName = "Jan",
@@ -20,12 +21,17 @@ namespace sda_csharp_exercises
             //};
             //person.WhoAmI();
             //Console.WriteLine(person.IsAdult());
+           
             Employee employee = new Employee();
             employee.FirstName = "Jan";
             employee.LastName = "Kowalski";
             employee.YearOfBirth = 1981;
             employee.Salary = 5000;
             employee.WhoAmI();
+
+            Person person = new Person(firstName: "Adam", yearOfBirth: 2015, lastName: "Nowak");
+            person.WhoAmI();
+            Console.WriteLine(person.YearOfBirth);
         }
     }
 }

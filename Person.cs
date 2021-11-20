@@ -31,7 +31,7 @@ namespace sda_csharp_exercises
             Console.WriteLine("Called Person constructor without parameters.");
         }
 
-        public Person(string firstName, string lastName, int yearOfBirth)
+        public Person(string firstName = "", string lastName = "", int yearOfBirth = 1900)
         {
             Console.WriteLine("Called Person constructor with parameters.");
 
