@@ -29,6 +29,7 @@ namespace sda_csharp_exercises
             people.Add(person);
             people.Add(employee);
             people.Add(person2);
+            people.Add(person3);
 
             foreach(Person p in people)
             {
