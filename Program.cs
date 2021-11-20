@@ -10,6 +10,9 @@ namespace sda_csharp_exercises
             Person person = new Person("Jan", "Kowalski", 1981);
             Employee employee = new Employee("Adam", "Nowak", 2000, 5000);
             Person person2 = new Employee("Joanna", "Kowalska", 1982, 6000);
+            //Employee employee2 = (Employee)person2;
+            //Employee employee2 = person2 as Employee;
+
             List<Person> people = new List<Person>();
             people.Add(person);
             people.Add(employee);
@@ -17,17 +20,16 @@ namespace sda_csharp_exercises
 
             foreach(Person p in people)
             {
-                if(p.GetType() == typeof(Person))
+                if(p is Employee e)
                 {
                     p.WhoAmI();
-                    Console.WriteLine("Is Person.");
-                }
-                else if (p.GetType() == typeof(Employee))
-                {
-                    p.WhoAmI();
-                    Console.WriteLine("IS Employee.");
-                    Employee e = (Employee)p;
+                    Console.WriteLine("Is Employee.");
                     Console.WriteLine($"Salary = {e.Salary}");
+                }
+                else if (p is Person)
+                {
+                    p.WhoAmI();
+                    Console.WriteLine("Is Person.");                  
                 }
                 else { Console.WriteLine("No idea!"); }
             }
