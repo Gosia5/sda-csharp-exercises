@@ -4,37 +4,28 @@ namespace sda_csharp_exercises
 {
     class Program
     {
-        public static int[] BubbleSort(int[] table)
-        {
-            for (int i = 0; i < table.Length - 1; i++)
-            {
-                for (int j = 0; j < table.Length - i - 1; j++)
-                {
-                    if (table[j] > table[j + 1])
-                    {
-                        Swap(ref table[j], ref table[j + 1]);
-
-                    }
-                }
-            }
-            return table;
-        }
-        public static void Swap(ref int x, ref int y)
-        {
-            int temp = 0;
-            temp = x;
-            x = y;
-            y = temp;
-        }
         static void Main(string[] args)
         {
-            int[] answer;
-            answer = BubbleSort(new int[] { 7, 1234, 1, 5, 23, 532, 6 });
-            foreach (int number in answer)
-            {
-                Console.WriteLine(number);
-            }
-
+            //Person person = new Person();
+            //person.WhoAmI();
+            //person.FirstName = "Jan";
+            //person.LastName = "Kowalski";
+            //person.YearOfBirth = 1981;
+            //Console.WriteLine(person.IsAdult());
+            //Person person = new Person()
+            //{
+            //    FirstName = "Jan",
+            //    LastName = "Kowalski",
+            //    YearOfBirth = 1981
+            //};
+            //person.WhoAmI();
+            //Console.WriteLine(person.IsAdult());
+            Employee employee = new Employee();
+            employee.FirstName = "Jan";
+            employee.LastName = "Kowalski";
+            employee.YearOfBirth = 1981;
+            employee.Salary = 5000;
+            employee.WhoAmI();
         }
     }
 }
