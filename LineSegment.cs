@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace sda_csharp_exercises
 {
-    class LineSegment : MyPoint
+    class LineSegment
     {
 		public MyPoint A { get; set; }
 		public MyPoint B { get; set; }
-
-
 
 		public LineSegment(MyPoint a, MyPoint b)
 		{
