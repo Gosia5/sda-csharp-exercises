@@ -10,8 +10,7 @@ namespace sda_csharp_exercises
     {
         public double Z { get; set; }
 
-        public MyPoint3D(double x, double y, double z):
-            base(x,y)
+        public MyPoint3D(double x, double y, double z) : base(x,y)
         { Z = z; }
     }
 }
